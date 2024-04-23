@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/matchNumberHeading"
+                android:textSize="12pt" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/matchNumber_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="18dp"
+                android:hint="@string/matchNumberHeading"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/matchNumber_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="16sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/teamNumber_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:hint="@string/teamNumberHeading"
+                app:errorEnabled="true">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teamNumberHeading"
+                    android:textSize="12pt" />
+
+                <Spinner
+                    android:id="@+id/team_number_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="30pt"
+                    android:layout_weight="1"></Spinner>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/startingLocation_Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:gravity="center"
+                android:text="@string/startingLocationHeading"
+                android:textSize="12pt"
+                android:visibility="invisible" />
+
+            <Spinner
+                android:id="@+id/starting_location"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_marginTop="8dp"
+                android:entries="@array/startingLocation"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
+
+            // Begin of High Power Port counters
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/AutoHigh_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/AutoHighHeading"
+                    android:textSize="12pt" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/AutoHighAttempt_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/AutoHighAttemptHeading"
+                    android:textSize="12pt" />
+
+                <TextView
+                    android:id="@+id/AutoHighMade_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/AutoHighMadeHeading"
+                    android:textSize="12pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/decrease_AutoHighAttempt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="decreaseAutoHighAttemptInput"
+                    android:text="@string/minus" />
+
+                <Button
+                    android:id="@+id/increase_AutoHighAttempt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="increaseAutoHighAttemptInput"
+                    android:text="@string/plus" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/auto_high_attempt_input_layout"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    app:errorEnabled="true"
+                    tools:ignore="UnknownId">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/auto_high_attempt_input"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/auto_high_made_layout"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    tools:ignore="UnknownId">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/auto_high_made_input"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/decrease_teleop_cargo_in_cargo_ship"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="decreaseAutoHighMadeInput"
+                    android:text="@string/minus" />
+
+                <Button
+                    android:id="@+id/increase_teleop_cargo_in_cargo_ship"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="increaseAutoHightMadeInput"
+                    android:text="@string/plus" />
+
+
+            </LinearLayout>
+            //End of High Power Port counters
+
+            //Begin of Low Power Port counters
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/AutoLow_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/AutoLowHeading"
+                    android:textSize="12pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/AutoLowAttempt_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/AutoHighAttemptHeading"
+                    android:textSize="12pt" />
+
+                <TextView
+                    android:id="@+id/AutoLowhMade_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/AutoHighMadeHeading"
+                    android:textSize="12pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/decrease_AutoLowAttempt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="decreaseAutoLowAttemptInput"
+                    android:text="@string/minus" />
+
+                <Button
+                    android:id="@+id/increase_AutoLowAttempt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="increaseAutoLowAttemptInput"
+                    android:text="@string/plus" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/auto_low_attempt_input_layout"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    app:errorEnabled="true"
+                    tools:ignore="UnknownId">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/auto_low_attempt_input"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/auto_low_made_layout"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    tools:ignore="UnknownId">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/auto_low_made_input"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/decrease_AutoLowMade"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="decreaseAutoLowMadeInput"
+                    android:text="@string/minus" />
+
+                <Button
+                    android:id="@+id/increase_AutoLowMade"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="increaseAutoLowMadeInput"
+                    android:text="@string/plus" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/AutoTrap_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/AutoTrapHeading"
+                    android:textSize="12pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/AutoTrapAttempt_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/AutoHighAttemptHeading"
+                    android:textSize="12pt" />
+
+                <TextView
+                    android:id="@+id/AutoLowMade_Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/AutoHighMadeHeading"
+                    android:textSize="12pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/decrease_AutoTrapAttempt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="decreaseAutoTrapAttemptInput"
+                    android:text="@string/minus" />
+
+                <Button
+                    android:id="@+id/increase_AutoTrapAttempt"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="increaseAutoTrapAttemptInput"
+                    android:text="@string/plus" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/auto_trap_attempt_input_layout"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    app:errorEnabled="true"
+                    tools:ignore="UnknownId">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/auto_trap_attempt_input"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/auto_trap_made_layout"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    tools:ignore="UnknownId">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/auto_trap_made_input"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/decrease_AutoTrapMade"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="decreaseAutoTrapMadeInput"
+                    android:text="@string/minus" />
+
+                <Button
+                    android:id="@+id/increase_AutoTrapMade"
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:onClick="increaseAutoTrapMadeInput"
+                    android:text="@string/plus" />
+
+            </LinearLayout>
+
+            ///End of Lower Power Port Counters
+
+            // Start of Initiation Line Question
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/AutoMoveOffInitiationLineQuestion"
+                android:textSize="10pt" />
+
+            <RadioGroup
+                android:id="@+id/auto_initiation_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:checkedButton="@id/AutoInitiationLine_yes"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/AutoInitiationLine_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/AutoInitiationLine_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/no" />
+
+            </RadioGroup>
+
+            // End of Initiation Line Question
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="match_parent"
+                android:layout_height="60pt"
+                android:layout_marginTop="20dp"
+                android:onClick="onShowTeleop"
+                android:text="@string/nextButton"
+                android:textSize="12pt" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

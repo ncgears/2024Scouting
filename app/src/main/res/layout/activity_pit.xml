@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/pit_teamNumber_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="@string/pitTeamNumberHeading"
+                android:textSize="10pt" />
+
+            <Spinner
+                android:id="@+id/pit_team_number_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pitRobotWeightTextView"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/pit_robot_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="Weight"
+                android:hint="@string/pitRobotWeightHint"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp" />
+
+
+            <TextView
+                android:id="@+id/pit_driveTrain_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="@string/pitDriveTrain"
+                android:textSize="10pt" />
+
+            <Spinner
+                android:id="@+id/pit_drive_train_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/drive_train_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pitOther"
+                android:textSize="10pt"
+                android:visibility="invisible"
+                android:inputType="text"
+                android:importantForAutofill="no" />
+
+
+            <TextView
+                android:id="@+id/pit_programmingLanguage_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="@string/pitProgrammingLanguage"
+                android:textSize="10pt" />
+
+            <Spinner
+                android:id="@+id/pit_programming_language_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/programming_language_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pitOther"
+                android:textSize="10pt"
+                android:visibility="invisible"
+                android:inputType="text"
+                android:autofillHints="" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/pitAutoPrograms"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/pit_auto_programs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:autofillHints="" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/pit_power_cell_pickup"
+                android:textSize="10pt"
+                android:textStyle="normal" />
+
+            <RadioGroup
+                android:id="@+id/pit_power_cell_pickup_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/power_cell_pickup_na"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/pit_power_cell_pickup_floor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/power_cell_pickup_floor_string" />
+
+                <RadioButton
+                    android:id="@+id/pit_power_cell_pickup_feed_station"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/power_cell_pickup_feed_station_text" />
+
+                <RadioButton
+                    android:id="@+id/pit_power_cell_pickup_either"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/power_cell_pickup_either_text" />
+
+                <RadioButton
+                    android:id="@+id/pit_power_cell_pickup_na"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/rating_na" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/pitPowerPortShotQ"
+                android:textSize="10pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/pit_shoot_target_zone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="setStringShot"
+                    android:text="@string/tele_shoot_target_zone"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/pit_shoot_field_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:onClick="setStringShot"
+                    android:text="@string/tele_shoot_field_front"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/pit_shoot_field_diagonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:onClick="setStringShot"
+                    android:text="@string/tele_shoot_field_diagonal"
+                    tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/pit_shoot_trench_near"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="setStringShot"
+                    android:text="@string/tele_shoot_trench_near"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/pit_shoot_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="setStringShot"
+                    android:text="@string/tele_shoot_other"
+                    android:visibility="visible" />
+
+                <CheckBox
+                    android:id="@+id/pit_shoot_trench_far"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="setStringShot"
+                    android:text="@string/tele_shoot_trench_far"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/favoritShot"
+                android:textSize="10pt"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/pit_fav_target_zone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="setStringFavShot"
+                    android:text="@string/tele_shoot_target_zone"/>
+
+                <CheckBox
+                    android:id="@+id/pit_fav_field_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:onClick="setStringFavShot"
+                    android:text="@string/tele_shoot_field_front" />
+
+                <CheckBox
+                    android:id="@+id/pit_fav_field_diagonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:onClick="setStringFavShot"
+                    android:text="@string/tele_shoot_field_diagonal"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/pit_fav_trench_near"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="setStringFavShot"
+                    android:text="@string/tele_shoot_trench_near"/>
+
+                <CheckBox
+                    android:id="@+id/pit_fav_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="setStringFavShot"
+                    android:text="@string/tele_shoot_other"
+                    android:visibility="visible" />
+
+                <CheckBox
+                    android:id="@+id/pit_fav_trench_far"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="setStringFavShot"
+                    android:text="@string/tele_shoot_trench_far"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:text="@string/pitEndgameLocation"-->
+<!--                android:textSize="10pt"-->
+<!--                />-->
+<!--            <Spinner-->
+<!--                android:id="@+id/pit_end_game_location_spinner"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:scrollbarSize="30dp"-->
+<!--                android:layout_height="30dp">-->
+<!--            </Spinner>-->
+
+         /*   <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/pitDriveThroughTrench"
+                android:textSize="10pt"
+                android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/pit_drive_thru_trench"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <RadioButton
+                    android:id="@+id/pit_drive_thru_trench_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/yes"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/pit_drive_thru_trench_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/no"
+                    android:visibility="gone" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/pitShotLocation"
+                android:textSize="10pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/pit_shot_location_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="setPitShotLocationString"
+                    android:text="@string/pitShotLocationBottom" />
+
+                <CheckBox
+                    android:id="@+id/pit_shot_location_outer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="setPitShotLocationString"
+                    android:text="@string/pitShotLocationOuter"
+                    android:visibility="visible" />
+
+                <CheckBox
+                    android:id="@+id/pit_shot_location_inner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:onClick="setPitShotLocationString"
+                    android:text="@string/pitShotLocationInner" />
+                <CheckBox
+                    android:id="@+id/pit_shot_location_na"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:onClick="setPitShotLocationString"
+                    android:text="@string/pitShotLocationNa" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/pitControlPanel"
+                android:textSize="10pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/pit_endgame_location"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/pit_endgame_hang_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Can't hang" />
+
+                <RadioButton
+                    android:id="@+id/pit_endgame_hang_alone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Can hang alone" />
+
+                <RadioButton
+                    android:id="@+id/pit_endgame_hang_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1 Other Robot"
+                    />
+
+                <RadioButton
+                    android:id="@+id/pit_endgame_hang_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2 Other Robots" />
+
+            </RadioGroup>
+            </LinearLayout>
+
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:text="@string/pitEndgameHang"-->
+<!--                android:textSize="10pt"-->
+<!--                android:visibility="gone" />-->
+
+<!--            <RadioGroup-->
+<!--                android:id="@+id/pit_endgame_hang"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/pit_endgame_hang_yes"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    android:text="@string/yes"-->
+<!--                    android:visibility="gone" />-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/pit_endgame_hang_no"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    android:text="@string/no"-->
+<!--                    android:visibility="gone" />-->
+
+<!--            </RadioGroup>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/pitGamePlan"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/pit_basic_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="Other"
+                android:hint="@string/pitOtherLabel"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/pit_fun_questions"
+                android:textSize="15pt"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/pit_robot_name"
+                android:textSize="10pt"
+                />
+
+            <EditText
+                android:id="@+id/pit_robot_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="Other"
+                android:hint="@string/pit_robot_name_hint"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scouterInitials"
+                android:textSize="10pt" />
+
+
+            <EditText
+                android:id="@+id/scouterInitials_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="Initials"
+                android:hint="@string/scouterInitials"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColorHint="#0277BD"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+            <Button
+                android:visibility="invisible"
+                android:id="@+id/take_photo_btn"
+                android:layout_width="match_parent"
+                android:layout_height="80pt"
+                android:onClick="takePhoto"
+                android:text="@string/takePhotoButton"
+                android:textSize="12pt" />
+
+            <Button
+                android:id="@+id/save_pit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:onClick="savePitData"
+                android:text="@string/savePitButton"
+                android:textSize="12pt" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:autofillHints="" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

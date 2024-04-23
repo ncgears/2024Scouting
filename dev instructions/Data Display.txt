@@ -1,0 +1,3 @@
+To organize and our data, I created a SQL database using MySQL server and PopSQL and imported the data from the CSVs from each tablet. Alicia uses a different process that is more efficient using SQLite.
+
+To display our data, we use tableau. Good examples of those displays can be seen on NCGEARS Laptop 5. Here is a published vis from the 2024 Season: https://public.tableau.com/views/NCGEARSGVSU2024ScoutingFeed/Dashboard1?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link

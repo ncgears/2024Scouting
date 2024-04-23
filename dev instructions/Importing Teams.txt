@@ -1,0 +1,13 @@
+To import a set of teams for an event, create a google sheet with the teams following this format: https://docs.google.com/spreadsheets/d/1iH71bhqwwXhN5UFfaJnYUZU0hVWv2XBh9JCiLs95fLc/edit#gid=0
+
+Then, in the settings folder of the app in Android Studio, update the teamsUrl with that sheet. It should look like this:
+        
+public static final String teamsUrl = "https://sheets.googleapis.com/v4/spreadsheets/ YOUR SPREADSHEET's ID /values:batchGet?majorDimension=ROWS&ranges=A2%3AB200&key=AIzaSyD-N8qhcwO6tdMFx6t3ZA6PvwSvb_1D9AE";
+
+using the example spreadsheet, this would look like:
+
+public static final String teamsUrl = "https://sheets.googleapis.com/v4/spreadsheets/1iH71bhqwwXhN5UFfaJnYUZU0hVWv2XBh9JCiLs95fLc/values:batchGet?majorDimension=ROWS&ranges=A2%3AB200&key=AIzaSyD-N8qhcwO6tdMFx6t3ZA6PvwSvb_1D9AE";
+
+
+
+Once that is done, you can push the code to the tablets, connect the wifi, and load the teams with the button on the main screen of the app.

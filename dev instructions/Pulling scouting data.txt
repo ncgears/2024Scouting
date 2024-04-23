@@ -1,0 +1,3 @@
+to get the scouting data, connect the tablet to your computer via usb. Go into the tablet's files, into the SCOUTING folder, and copy either the Matchdata or Pitdata file to your computer. 
+
+AFTER THE EVENT, and ONLY after the event, delete the Matchdata and Pitdata files from the SCOUTING folder. This will clear the entire file for the next event. DO NOT do this during an event, only after.
